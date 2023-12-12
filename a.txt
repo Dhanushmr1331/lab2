@@ -1,0 +1,12 @@
+FROM openjdk
+WORKDIR /app
+COPY . /app
+RUN javac hello.java
+CMD ["java","hello"]
+
+docker build -t image .
+docker run --name demo image
+git checkout -b "b4"
+git switch master
+git remote add origin "reop"
+git config user.email "abc@gmail.com"
